@@ -1,25 +1,34 @@
+
 import react from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import {BrowserRouter, Routes,Route } from 'react-router-dom';
-import Abotus from './pages/Abuotus';
-import Experience from './pages/Experiance';
+import Aboutus from './pages/Aboutus';
+import Certifications from './pages/Certifications'; 
+import Contactme from './pages/Contactme';
+import Experiance from './pages/Experiance';
 import Hobbies from './pages/Hobbies' ;
+import Projects from './pages/Projects';
 import Qualification from './pages/Qualification';
 import Skills from './pages/Skills';
-
-function App() {
+import Workshops from './pages/Workshops';
+ function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="Aboutus" element ={<Abotus/>}/>
-        <Route path="Experiance" element={<Experience/>}/>
+        <Route path="Aboutus" element ={<Aboutus/>}/>
+        <Route path="Certifications" element={<Certifications/>}/>
+        <Route path="Contactme" element={<Contactme/>}/>
+        <Route path="Experiance" element={<Experiance/>}/>
         <Route path="Hobbies" element={<Hobbies/>}/>
+        <Route path="Projects" element={<Projects/>}/>
         <Route path="Qualification" element={<Qualification/>}/>
         <Route path="Skills" element={<Skills/>}/>
+        <Route path="Workshops" element={<Workshops/>}/>
+        
        
       </Routes>
       </BrowserRouter>

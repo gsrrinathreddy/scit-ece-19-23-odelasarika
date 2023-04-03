@@ -57,7 +57,7 @@ export default function Experience() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Creating Responsive RESUME Website
+          Creating Responsive RESUME Website
           </Typography>
         </AccordionDetails>
       </Accordion>

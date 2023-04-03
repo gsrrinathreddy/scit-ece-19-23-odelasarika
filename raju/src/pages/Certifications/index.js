@@ -53,31 +53,31 @@ export default function Experience() {
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>project-1</Typography>
+          <Typography>certificate-1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Creating Responsive RESUME Website
+            PGDCA
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>project-2</Typography>
+          <Typography>certificate-2</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Image Segmentation Using Conditional Random Fields
+            image processing using MATLAB
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>project-3</Typography>
+          <Typography>Certificate-3</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Telegram Messenger App Checking Home condition And Control System Using IOT
+            Full Stack Web Development
           </Typography>
         </AccordionDetails>
       </Accordion>
