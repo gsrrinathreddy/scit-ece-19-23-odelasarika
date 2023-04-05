@@ -3,9 +3,28 @@ import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import MuiAccordionDetails from '@mui/material/AccordionDetails'; 
+import axios from 'axios';
+import {useState,useEffect} from 'react';
+import { Typography } from '@mui/material';
 
+
+export default function Skills(){
+
+  const [loader,setLoader] = useState(true);
+  const [workshops,setWorkshops] = useState(null);
+
+  const connectToServer = async  () => axios.get('http://localhost:8000/workshops')
+                                          .then(res=>{
+                                      
+                                              console.log(res.data);
+                                              setWorkshops(res.data);
+                                              setLoader(false)
+                                          }).catch(err=>console.log(err))                                          
+                                          
+       useEffect(()=>{ 
+ connectToServer();
+},[]) 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -42,7 +61,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function Experience() {
+
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
